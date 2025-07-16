@@ -24,7 +24,7 @@ export const Background = ({ className = "" }) => {
      * @returns {void}
      */
     const generateParticles = () => {
-        const numberOfParticles = 6;
+        const numberOfParticles = 7;
         /** @type {Particle[]} */
         const newParticles = [];
 
@@ -33,7 +33,7 @@ export const Background = ({ className = "" }) => {
             newParticles.push({
                 id: i,
                 size: Math.random() * 2 + 1,
-                x: Math.random() * 100,
+                x: Math.random() * 90,
                 y: Math.random() * 20,
                 delay: Math.random() * 1,
                 animationDuration: Math.random() * 3 + 3,
@@ -50,8 +50,8 @@ export const Background = ({ className = "" }) => {
                     key={particle.id}
                     className={"particle animate-particle " + className}
                     style={{
-                        width: particle.size * 3 + "px",
-                        height: particle.size * 2 + "px",
+                        width: particle.size * (Math.random() * 2 + 3) + "px",
+                        height: particle.size * (Math.random() + 1) + "px",
                         left: particle.x + "%",
                         top: particle.y + "%",
                         animationDelay: particle.delay + "s",
