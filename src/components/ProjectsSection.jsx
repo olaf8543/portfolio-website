@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { siGithub } from 'simple-icons';
 
 /**
@@ -27,9 +28,9 @@ const projects = [
         title: "Music Link Converter",
         description: "Convert song links to and from Spotify and YouTube Music",
         image: "/projects/linkconverter.jpg",
-        tags: ["React", "TailwindCSS", "CRUD", "JSDoc"],
+        tags: ["React", "TailwindCSS", "CRUD", "JSDoc", "AWS"],
         demoUrl: "/converter",
-        githubUrl: "#",
+        githubUrl: "https://github.com/olaf8543/portfolio-website",
     },
     {
         id: 2,

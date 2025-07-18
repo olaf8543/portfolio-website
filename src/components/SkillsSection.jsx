@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 const skills = [
     // Languages
     { name: "C", category: "languages" },
-    { name: "Rust", category: "languages" },
+    // { name: "Rust", category: "languages" },
     { name: "Shell Script", category: "languages" },
     { name: "Java", category: "languages" },
     { name: "Python", category: "languages" },
@@ -29,7 +29,8 @@ const skills = [
     { name: "RESTful APIs", category: "technologies" },
     { name: "Spring Boot", category: "technologies" },
 
-    { name: "Docker", category: "tools" },
+    { name: "AWS", category: "tools" },
+    // { name: "Docker", category: "tools" },
     { name: "CI/CD", category: "tools" },
     { name: "Figma", category: "tools" },
     { name: "Linux", category: "tools" },

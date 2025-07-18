@@ -46,7 +46,7 @@ export const AboutSection = () => {
                         </div>
                     </div>
                     <div className="relative group p-[2px] bg-gradient-to-r from-primary-gradient-one to-primary-gradient-two rounded-4xl card-hover">
-                        <img className="rounded-4xl" src="/images/Me.jpg" alt="Me" />
+                        <img className="rounded-4xl" src="/images/mady.jpg" alt="Me" />
                     </div>
                 </div>
             </div>

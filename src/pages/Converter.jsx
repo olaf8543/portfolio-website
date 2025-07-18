@@ -141,19 +141,6 @@ export const Converter = () => {
         setIsSubmitting(false);
     };
 
-    /** Decodes html encoded text
-     * eg. We&#39;re Outside, Rejoice!
-     * becomes
-     * eg. We're Outside, Rejoice!
-     * @param {string} text
-     * @returns {string}
-     */
-    const decodeHtmlText = (text) => {
-        const textArea = document.createElement('textarea');
-        textArea.innerHTML = text;
-        return textArea.value;
-    };
-
     // Memoize derived values
     const currentLinkType = linkType();
     const currentConversionType = conversionType();
@@ -169,15 +156,15 @@ export const Converter = () => {
 
             <nav className="p-5 px-4 fixed top-0 left-5 bg-background/80 backdrop-blur-md min-w-full transition-all duration-300">
                 <Link to="/" className="text-xl font-bold text-primary flex items-center">
+                    <span className="text-glow text-foreground">owenlafferty</span>
                     <span className={cn("relative gradient-text inset-0",
                         currentLinkType === "spotify" ? "from-youtube-gradient-one to-youtube-gradient-two" : ""
                     )}>
-                        <span className="text-glow text-foreground">owenlafferty</span>
-                        .something
+                        .com
                     </span>
                 </Link>
             </nav>
-            <ThemeToggle className="fixed top-5 right-5 z-50" />
+            <ThemeToggle className="fixed top-5 right-5 z-60" />
 
             <section className="mt-24 px-4 relative">
                 <div className="container mx-auto max-w-5xl">

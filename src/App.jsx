@@ -5,18 +5,18 @@ import { Toaster } from "@/components/ui/toaster";
 import { Converter } from "./pages/Converter";
 
 function App() {
-  return (
-    <>
-      <Toaster />
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/converter" element={<Converter />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+    return (
+        <>
+            <Toaster />
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path="/converter" element={<Converter />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;

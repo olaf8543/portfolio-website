@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 import { retrieveSpotifyLinkData, retrieveYoutubeLinkData } from "./modules/dataExtraction.js";
 import { convertSpotifyLinkToYoutubeLink, convertYoutubeLinkToSpotifyLink } from "./modules/linkConversions.js";
 
@@ -12,11 +14,11 @@ app.use(express.json());
 app.use(cors());
 const PORT = process.env.PORT || 3000;
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-app.get("/", (_, res) => {
-    res.json({ message: "Hello from the backend!" });
-});
-
+// Serve website
+app.use(express.static(path.join(__dirname, "..", "dist")));
 
 /**
  * GET /convert?link=<link>
@@ -62,6 +64,11 @@ app.get('/convert', async (req, res) => {
         });
         return;
     }
+});
+
+// Catch all route to serve index
+app.get(/^.*$/, (_, res) => {
+    res.sendFile(path.join(__dirname, "..", "dist", "index.html"));
 });
 
 app.listen(PORT, () => {

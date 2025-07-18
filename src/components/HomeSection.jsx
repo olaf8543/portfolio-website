@@ -12,7 +12,7 @@ export const HomeSection = () => {
                     <img
                         className={cn("rounded-4xl max-w-[280px] md:max-w-[350px] lg:max-w-full w-full h-auto p-[2px] bg-gradient-to-r",
                             "from-primary-gradient-one to-primary-gradient-two card-hover opacity-0 animate-fade-in-delay-4 md:animate-fade-in-delay-2")}
-                        src="/images/Me.jpg"
+                        src="/images/picnic.webp"
                         alt="Profile"
                     />
                 </div>

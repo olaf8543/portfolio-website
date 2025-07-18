@@ -55,7 +55,7 @@ export const Navbar = () => {
                     >
                         <span className="relative z-10 gradient-text">
                             <span className="text-glow text-foreground">owenlafferty</span>
-                            .something
+                            .com
                         </span>
                     </a>
 
