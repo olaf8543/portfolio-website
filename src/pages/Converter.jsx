@@ -101,7 +101,6 @@ export const Converter = () => {
         e.preventDefault();
 
         if (!isValidUrl(link)) {
-            console.log(api_url);
             toast({
                 title: "Invalid URL",
                 description: "Please enter a valid Spotify or YouTube Music URL",

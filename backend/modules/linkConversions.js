@@ -24,11 +24,6 @@ export async function convertYoutubeLinkToSpotifyLink(youtubeLinkData) {
     const query = `${youtubeLinkData.name} ${youtubeLinkData.artists[0]}`;
     const apiUrl = "https://api.spotify.com/v1/search";
 
-    console.log(youtubeLinkData);
-
-    console.log(query);
-
-
     const searchParams = new URLSearchParams();
     searchParams.append('grant_type', 'client_credentials');
     searchParams.append('client_id', clientId);
@@ -65,9 +60,6 @@ export async function convertYoutubeLinkToSpotifyLink(youtubeLinkData) {
             }
         }
 
-        const best = retrieveSpotifyResponseData(response, bestIndex);
-        console.log(best);
-
         return { retrievedSong: retrieveSpotifyResponseData(response, bestIndex), confidence: bestConfidence };
 
     } catch (error) {
@@ -90,8 +82,6 @@ export async function convertSpotifyLinkToYoutubeLink(spotifyLinkData) {
 
     const query = `${spotifyLinkData.name} ${spotifyLinkData.artists.join(" ")}`
     const apiUrl = "https://youtube.googleapis.com/youtube/v3/search"
-
-    console.log(query);
 
     try {
         const response = await axios.get(apiUrl, {
@@ -124,9 +114,6 @@ export async function convertSpotifyLinkToYoutubeLink(spotifyLinkData) {
 
             }
         }
-
-        const best = retrieveYoutubeResponseData(response, bestIndex);
-        console.log(best);
 
         return { retrievedSong: retrieveYoutubeResponseData(response, bestIndex), confidence: bestConfidence };
 
